@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
+
 import '../entities/user.dart';
 
 class Register extends StatefulWidget {
@@ -31,7 +32,7 @@ class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey[900], // Change the background color
+      backgroundColor: Color.fromARGB(255, 255, 255, 255), // Change the background color
       body: Center(
         child: SingleChildScrollView(
           child: Form(
@@ -54,8 +55,8 @@ class _RegisterState extends State<Register> {
                         Text(
                           "Register to Your Account",
                           style: GoogleFonts.oswald(
-                            fontWeight: FontWeight.w700,
-                            fontSize: 24,
+                           
+                            fontSize: 14,
                             color: Colors.black,
                           ),
                         ),
@@ -67,7 +68,7 @@ class _RegisterState extends State<Register> {
                           decoration: const InputDecoration(
                             labelText: "Email",
                             fillColor: Colors.white,
-                            filled: true,
+                          
                           ),
                           validator: (value) {
                             // Your validation logic
@@ -81,7 +82,7 @@ class _RegisterState extends State<Register> {
                           decoration: const InputDecoration(
                             labelText: "Password",
                             fillColor: Colors.white,
-                            filled: true,
+                           
                           ),
                           obscureText: true,
                           validator: (value) {
@@ -93,7 +94,7 @@ class _RegisterState extends State<Register> {
                         ),
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            primary: Colors.blue, // Change the button color
+                            primary: const Color.fromARGB(255, 0, 0, 0), // Change the button color
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10.0),
                             ),

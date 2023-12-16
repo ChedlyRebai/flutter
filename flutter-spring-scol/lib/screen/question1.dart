@@ -1,26 +1,25 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
 import 'package:intl/intl.dart';
 import 'package:tp70/entities/absence.dart';
+import 'package:tp70/entities/matier.dart';
 import 'package:tp70/entities/student.dart';
 import 'package:tp70/services/classeservice.dart';
-import 'package:tp70/entities/matier.dart';
 import 'package:tp70/template/dialog/absencedialog.dart';
-import 'package:tp70/template/dialog/classedialog.dart';
-import 'package:tp70/template/dialog/matierdialog.dart';
 import 'package:tp70/template/navbar.dart';
-import 'package:http/http.dart' as http;
-import 'package:http/http.dart';
-import 'dart:convert';
+
 import '../entities/classe.dart';
 
-class AbsenceScreen_2 extends StatefulWidget {
+class Question1 extends StatefulWidget {
   @override
-  AbsenceScreen_2State createState() => AbsenceScreen_2State();
+  Question1State createState() => Question1State();
 }
 
-class AbsenceScreen_2State extends State<AbsenceScreen_2> {
+class Question1State extends State<Question1> {
   List<Classe> classes = [];
   List<Student> students = [];
   Classe? selectedClass;
@@ -59,7 +58,7 @@ class AbsenceScreen_2State extends State<AbsenceScreen_2> {
         classes = result;
       });
 
-      print("class from AbsenceScreen_2: " +
+      print("class from Question1: " +
           classes.elementAt(0).matieres.toString());
     });
   }
@@ -218,7 +217,7 @@ class AbsenceScreen_2State extends State<AbsenceScreen_2> {
                                 );
                               });
                         },
-                        backgroundColor: const Color(0xFF21B7CA),
+                        backgroundColor: Color.fromARGB(255, 121, 121, 121),
                         foregroundColor: Colors.white,
                         icon: Icons.edit,
                         label: 'Edit',
@@ -283,7 +282,7 @@ class AbsenceScreen_2State extends State<AbsenceScreen_2> {
                                     style: const TextStyle(
                                         fontWeight: FontWeight.bold,
                                         backgroundColor:
-                                            Colors.lightBlueAccent))
+                                            Color.fromARGB(255, 185, 185, 185)))
                               ],
                             ),
                           ],

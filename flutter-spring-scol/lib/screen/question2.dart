@@ -1,26 +1,25 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
 import 'package:intl/intl.dart';
 import 'package:tp70/entities/absence.dart';
+import 'package:tp70/entities/matier.dart';
 import 'package:tp70/entities/student.dart';
 import 'package:tp70/services/classeservice.dart';
-import 'package:tp70/entities/matier.dart';
 import 'package:tp70/template/dialog/absencedialog.dart';
-import 'package:tp70/template/dialog/classedialog.dart';
-import 'package:tp70/template/dialog/matierdialog.dart';
 import 'package:tp70/template/navbar.dart';
-import 'package:http/http.dart' as http;
-import 'package:http/http.dart';
-import 'dart:convert';
+
 import '../entities/classe.dart';
 
-class AbsenceScreen_1 extends StatefulWidget {
+class Question2 extends StatefulWidget {
   @override
-  AbsenceScreen_1State createState() => AbsenceScreen_1State();
+  Question2State createState() => Question2State();
 }
 
-class AbsenceScreen_1State extends State<AbsenceScreen_1> {
+class Question2State extends State<Question2> {
   List<Classe> classes = [];
   List<Student> students = [];
   Classe? selectedClass;
@@ -59,7 +58,7 @@ class AbsenceScreen_1State extends State<AbsenceScreen_1> {
         classes = result;
       });
 
-      print("class from AbsenceScreen_1: " +
+      print("class from Question2: " +
           classes.elementAt(0).matieres.toString());
     });
   }
@@ -296,19 +295,19 @@ class AbsenceScreen_1State extends State<AbsenceScreen_1> {
               // show whene selected student is null
               return Container(
                 margin: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-                child: const Text("Select a student!",
+                child: const Text("",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.w900,
-                        backgroundColor: Colors.red)),
+                        fontSize: 10,
+                        
+                        backgroundColor: Color.fromARGB(255, 255, 255, 255))),
               );
             },
           )),
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.purpleAccent,
+        backgroundColor: const Color.fromARGB(255, 98, 64, 251),
         onPressed: () async {
           showDialog(
               context: context,

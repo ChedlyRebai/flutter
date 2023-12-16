@@ -35,10 +35,11 @@ class _LoginState extends State<Login> {
     }
   }
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey[900],
+      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       body: Center(
         child: SingleChildScrollView(
           child: Form(
@@ -61,8 +62,8 @@ class _LoginState extends State<Login> {
                         Text(
                           "Login to Your Account",
                           style: GoogleFonts.oswald(
-                            fontWeight: FontWeight.w700,
-                            fontSize: 24,
+                            
+                            fontSize: 17,
                             color: Colors.black,
                           ),
                         ),
@@ -74,7 +75,7 @@ class _LoginState extends State<Login> {
                           decoration: const InputDecoration(
                             labelText: "Email",
                             fillColor: Colors.white,
-                            filled: true,
+                            
                           ),
                           validator: (value) {
                             // Your validation logic
@@ -110,7 +111,7 @@ class _LoginState extends State<Login> {
                           child: const Text(
                             "Don't have an account?",
                             style: TextStyle(
-                              color: Colors.blue,
+                              color: Color.fromARGB(255, 0, 0, 0),
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -120,7 +121,7 @@ class _LoginState extends State<Login> {
                         ),
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.blue,
+                            backgroundColor: const Color.fromARGB(255, 156, 156, 156),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10.0),
                             ),
